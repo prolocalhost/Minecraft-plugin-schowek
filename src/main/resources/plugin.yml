@@ -1,0 +1,24 @@
+name: localhost-schowek
+version: '${version}'
+
+main: pl.localhost.schowek.Main
+api-version: '1.20'
+load: POSTWORLD
+
+authors: [ Localhost ]
+website:
+  discord: localhost_127001
+
+commands:
+  schowek:
+    aliases: [depozyt, schowekpvp, limit]
+    description: Glowna komenda schowka i depozytu przedmiotow PvP
+    permission: schowek.use
+
+permissions:
+  schowek.use:
+    description: Pozwala na korzystanie ze schowka i otwieranie GUI
+    default: true
+  schowek.admin:
+    description: Pozwala na zarzadzanie depozytami graczy i przeladowanie konfiguracji
+    default: op

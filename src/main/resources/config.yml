@@ -1,0 +1,110 @@
+# ==============================================================
+#                 localhost-schowek - Konfiguracja
+#       Autor: Localhost (discord: localhost_127001)
+# ==============================================================
+
+settings:
+  # Czy nadmiarowe przedmioty maja byc automatycznie przenoszone do schowka
+  # przy podnoszeniu z ziemi, craftingu oraz zamykaniu skrzynek
+  auto-schowek-enabled: true
+
+  # Czy alert o schowaniu nadmiarowych przedmiotow ma sie wyswietlac na ActionBarze
+  actionbar-alert: true
+
+  # Czas (w minutach) miedzy automatycznymi zapisami danych do pliku
+  auto-save-interval: 5
+
+  # Dźwięki
+  gui-sound: "UI_BUTTON_CLICK"
+  deposit-sound: "ENTITY_ITEM_PICKUP"
+  withdraw-sound: "ENTITY_EXPERIENCE_ORB_PICKUP"
+
+# Przedmioty podlegajace limitom i deponowane w schowku
+items:
+  kox:
+    material: "ENCHANTED_GOLDEN_APPLE"
+    name: "&6&lKoxy"
+    limit: 2
+    gui-slot: 11
+  refil:
+    material: "GOLDEN_APPLE"
+    name: "&e&lRefile"
+    limit: 12
+    gui-slot: 12
+  perla:
+    material: "ENDER_PEARL"
+    name: "&5&lPerły Kresu"
+    limit: 4
+    gui-slot: 13
+  totem:
+    material: "TOTEM_OF_UNDYING"
+    name: "&e&lTotemy"
+    limit: 1
+    gui-slot: 14
+  strzala:
+    material: "ARROW"
+    name: "&f&lStrzały"
+    limit: 32
+    gui-slot: 15
+
+# Konfiguracja Menu Graficznego (/schowek)
+gui:
+  title: "&8Schowek &7(Depozyt PvP)"
+  size: 36
+  background:
+    material: "GRAY_STAINED_GLASS_PANE"
+    name: " "
+
+  restock-button:
+    slot: 22
+    material: "EMERALD_BLOCK"
+    name: "&a&lDOBIERZ WSZYSTKO DO LIMITU"
+    lore:
+      - "&7Kliknij, aby jednym ruchem uzupełnić"
+      - "&7wszystkie przedmioty w Twoim ekwipunku"
+      - "&7do maksymalnych dozwolonych limitów!"
+      - ""
+      - "&8» &eKliknij, aby uzupełnić zapasy!"
+
+  deposit-button:
+    slot: 21
+    material: "HOPPER"
+    name: "&c&lSCHOWAJ NADMIAR"
+    lore:
+      - "&7Kliknij, aby natychmiast przenieść"
+      - "&7wszystkie nadmiarowe przedmioty z Twojego"
+      - "&7ekwipunku do wirtualnego schowka."
+      - ""
+      - "&8» &eKliknij, aby schować nadmiar!"
+
+  info-button:
+    slot: 23
+    material: "NETHER_STAR"
+    name: "&6&lInstrukcja Obsługi"
+    lore:
+      - "&7Schowek zapobiega noszeniu zbyt dużej"
+      - "&7ilości przedmiotów leczących podczas walki."
+      - ""
+      - "&8» &eLPM &7- Dobierz do limitu"
+      - "&8» &ePPM &7- Wypłać 1 sztukę"
+      - "&8» &eShift + LPM &7- Wpłać ten przedmiot do schowka"
+
+# Wiadomosci i komunikaty
+messages:
+  prefix: "&8[&6Schowek&8] &7"
+  no-permission: "&cNie posiadasz uprawnień do tej czynności!"
+  player-only: "&cTa komenda może być wykonana wyłącznie przez gracza!"
+  reload: "&aKonfiguracja schowka została pomyślnie przeładowana!"
+  auto-deposited: "&ePrzeniesiono &6%amount%x %item% &edo schowka &7(Limit: &f%limit%&7)!"
+  withdrawn: "&aWypłacono &e%amount%x %item% &aze schowka!"
+  withdrawn-all: "&aPomyślnie uzupełniono wszystkie przedmioty do limitu!"
+  deposited: "&aWpłacono &e%amount%x %item% &ado schowka!"
+  nothing-to-withdraw: "&cTwój schowek dla przedmiotu %item% jest pusty!"
+  limit-reached: "&cPosiadasz już pełny limit &e%item% &cw ekwipunku &7(%limit% szt.)&c!"
+  inventory-full: "&cTwój ekwipunek jest pełny! Nie można wypłacić więcej przedmiotów."
+  usage: "&7Użycie: &e/schowek [dobierz|schowaj|admin|reload]"
+  admin-usage: "&7Użycie: &e/schowek admin <gracz> <daj/zabierz/ustaw> <przedmiot> <ilość>"
+  admin-success: "&aZaktualizowano schowek gracza &e%player%&a! Przedmiot: &f%item%&a, Ilość: &e%amount%"
+  player-not-found: "&cPodany gracz jest offline!"
+  unknown-item: "&cNieprawidłowy przedmiot! Dostępne: &e%items%"
+  invalid-number: "&cPodana wartość musi być liczbą całkowitą większą lub równą 0!"
